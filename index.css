@@ -327,7 +327,7 @@ button{
     transform: scale(1.03);
 }
 .service{
-    margin-top: 530%;
+    margin-top: 630%;
     place-items: center;
 }
 .row  {
@@ -398,6 +398,336 @@ p {
     margin: 5rem 0;
     margin-top: 0;
 }
+.contant{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+}
+.contant .content{
+    min-width: 800px;
+    text-align: center;
+}
+.contant .content h2 {
+    font-size: 3rem;
+    color: #fdfdff;
+    font-weight: 500;
+}
+.contant .content p {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+.content-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+.content-container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.content-container .contactInfo .box5 {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    cursor: pointer;
+}
+.content-container .contactInfo .box5 .ion{
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    background: repeating-conic-gradient(from 27.5deg,cyan 0%,cyan 10%, transparent 10%,transparent 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-container .contactInfo .box5 .ion::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from 176.5deg,cyan 0%,cyan 10%, transparent 10%,transparent 50%);
+
+}
+.content-container .contactInfo .box5 .ion::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background-color: #030303;
+
+}
+.content-container .contactInfo .box5 .ion b {
+    position: absolute;
+    inset: 8px;
+    background-color: cyan;
+    z-index: 2;
+}
+.content-container .contactInfo .box5 .ion i {
+    position: relative;
+    z-index: 1000;
+    color: #333;
+    font-size: 1.25em;
+}
+.content-container .contactInfo .box5 .tex {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    font-size: 1.1em;
+    color: #fdfdff;
+    font-weight: 300;
+}
+.content-container .contactInfo .box5 .tex h3 {
+    font-weight: 500;
+    color: cyan;
+}
+.content-container .contactInfo .txt{
+    color: #fff;
+    margin-top: 55px;
+    font-weight: 550;
+    border-left: 50px solid cyan;
+    padding-left:  10px;
+    line-height: 1em;
+}
+.content-container .contactInfo .sci {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+.content-container .contactInfo .sci li {
+    list-style: none;
+}
+.content-container .contactInfo .sci li a{
+    color: #fff;
+    font-size: 1.5em;
+    transition: 0.25s;
+}
+.content-container .contactInfo .sci li a:hover {
+    color: cyan;
+    filter: drop-shadow(0 0 5px cyan);
+}
+.content-container .contactForm{
+    position: relative;
+    width: 100%;
+    background:repeating-conic-gradient(from var(--a),cyan 0%,cyan 10%, transparent 10%,transparent 50%);
+    animation: animate 6s linear infinite;
+    padding: 60px;
+}
+.content-container .contactForm::before {
+    content:'';
+    position: absolute;
+    inset: 0;
+    background:repeating-conic-gradient(from var(--a),cyan 0%,cyan 10%, transparent 10%,transparent 50%);
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.content-container .contactForm::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 20px solid rgb(28, 26, 26);
+    background-color: #333;
+}
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate {
+    0%
+    {
+        --a: 0deg
+    }
+    100%
+    {
+        --a: 360deg
+    }
+}
+.content-container .contactForm form {
+    position: relative;
+    z-index: 10;
+}
+.content-container .contactForm form h2 {
+    font-size: 2rem;
+    color: #fdfdff;
+    font-weight: 500;
+}
+.content-container .contactForm form .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+.tex p {
+    font-size: 14px;
+    line-height: 18px;
+    margin: -10px 0 10px 0;
+}
+.content-container .contactForm form .inputBox input,
+.content-container .contactForm form .inputBox textarea  {
+    width: 100% !important;
+    padding: 5px 0;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid cyan;
+    color: #fff;
+    outline: none;
+    resize: none;
+}
+.content-container .contactForm form .inputBox span {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #fff;
+    transition: 0.5s;
+}
+.content-container .contactForm form .inputBox input:focus ~ span,
+.content-container .contactForm form .inputBox textarea:focus ~ span, 
+.content-container .contactForm form .inputBox input:valid ~ span,
+.content-container .contactForm form .inputBox textarea:valid ~ span  {
+    color: cyan;
+    font-size: 0.9em;
+    transform: translateY(-24px);
+}
+.content-container .contactForm form .inputBox input[type="submit"] {
+    width: 100%;
+    background-color: cyan;
+    color: #030303;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+footer{
+    background-color: #333;
+    position: relative;
+    width: 100%;
+    min-height: 350px;
+    padding: 3rem 1rem;
+}
+.footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.roow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.col {
+    min-width: 250px;
+    color: #fff;
+    font-family: poppins;
+    padding: 0 2rem;
+}
+.col h3 {
+    color: red;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.col .log {
+    width: 100px;
+    margin-bottom: 25px;
+}
+.col h3::after {
+    content: '';
+    height: 3px;
+    width: 0px;
+    background-color: #ff4500;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+.col h3:hover::after {
+    width: 0px;
+}
+.col .social a i {
+    color: red;
+    margin-top: 2rem;
+    margin-right: 5px;
+    transition: 0.3s ease;
+}
+.col .social a i:hover{
+    transform: scale(1.5);
+    filter: grayscale(25);
+}
+.col .links a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.3s ease;
+}
+.col .links a::before {
+    content: '';
+    height: 16px;
+    width: 3px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: red;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.col .links a:hover::before{
+    opacity: 0;
+}
+.col .links a:hover {
+    transform: translateX(-8px);
+    color: rgb(255, 0, 0);
+}
+.col.content-details {
+    display: inline-flex;
+    justify-content: space-between;
+}
+.col.content-details i{
+    margin-right: 15px;
+}
+.roow .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.roow .form input {
+    background-color: #554d4d;
+    border: 0;
+    outline: none;
+    padding: 14px 20px;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form button {
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: red;
+}
 /*responsive*/
 @media only screen and (max-width:300px) {
     .prev, .next, .text{
@@ -420,6 +750,14 @@ p {
 @media (max-width: 922px) {
     .header{
         padding: 1.3rem 5%;
+    }
+    .roow{
+        flex-direction: column;
+    }
+    .col{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 25px;
     }
 }
 @media (max-width: 768px) {
@@ -498,7 +836,35 @@ p {
         padding: 0;
         grid-template-columns: repeat(1,1fr);
     }
+    .roow{
+        flex-direction: column;
+    }
+    .col{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
 
+}
+@media (max-width:991px) {
+    .contant {
+        padding: 50px;
+
+    }
+    .content-container {
+        flex-direction: column;
+    }
+    .content-container .contactInfo,
+    .content-container.contactForm {
+        width: 100%;
+
+    }
+    .content-container.contactForm {
+        padding: 40px;
+    }
+    .content-container.contactForm  form {
+        padding: 10px;
+    }
 }
 @media screen and (min-width: 768px) {
     .service{
