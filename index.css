@@ -750,6 +750,7 @@ footer{
 @media (max-width: 922px) {
     .header{
         padding: 1.3rem 5%;
+        width: 62%;
     }
     .roow{
         flex-direction: column;
